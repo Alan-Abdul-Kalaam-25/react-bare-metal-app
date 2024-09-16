@@ -1,13 +1,15 @@
+import { createRoot } from "react-dom/client";
 import React from "react";
-import ReactDOM from "react-dom";
 import Webapp from "./components/Webapp.jsx";
 
 function App() {
   return (
-    <>
+    <React.StrictMode>
       <Webapp />
-    </>
+    </React.StrictMode>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);
